@@ -71,7 +71,12 @@ var place = function(state){
 
 var move = function(){
     if (!toy.face) return;
-    
+    if (toy.face == "EAST"){
+		var next = toy.x + 1;
+	    if (next <= 5) toy.y = next;}
+	if (toy.face == "WEST"){
+		var next = toy.x - 1;
+	    if (next <= 5) toy.y = next;}
     var next = toy.y + 1;
     if (next <= 5) toy.y = next;
 };
