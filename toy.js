@@ -33,6 +33,12 @@ rd.on('line', function(line) {
         move();
         //console.log(JSON.stringify(toy));
     }
+    if (command === "LEFT"){
+        left();
+    }
+    if (command === "RIGHT"){
+        right();
+    }
     
      if (command === "REPORT"){
         if (!toy.face) return;
